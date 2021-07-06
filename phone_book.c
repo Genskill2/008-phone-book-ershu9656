@@ -105,6 +105,7 @@ void free_entries(entry *p) {
   while(p!=NULL){
     free(p);
     p=p->next;  
+ }
 }
 
 void print_usage(char *message, char *progname) {
@@ -252,7 +253,7 @@ void search(FILE *db_file, char *name){
       printf("%s",p->phone);
     }
     else{
-      printf("no match")
+      printf("no match");
     }
     p=p->next;
     free(base);
