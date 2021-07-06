@@ -194,7 +194,7 @@ void add(char *name, char *phone) {
   fprintf(fp, "%s,%s\n", name, phone);
   fclose(fp);
 }
-
+int size=0;
 void list(FILE *db_file) {
   entry *p = load_entries(db_file);
   entry *base = p;
@@ -206,6 +206,7 @@ void list(FILE *db_file) {
   }
   /* TBD print total count */
   free_entries(base);
+  size=count;
   
   printf("total entries : %d\n",count);
 }
@@ -266,7 +267,7 @@ int search(FILE *db_file, char *name){
     
     }
     p=p->next;
-    free(base);
+    free_entries(base);
     return found;
 
 
