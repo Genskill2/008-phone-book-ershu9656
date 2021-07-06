@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
     list(fp);
     fclose(fp);
     exit(0);
-  } else if (strcmp(argv[1], "search") == 0)) {  /* Handle search */
+  } else if (strcmp(argv[1], "search") == 0) {  /* Handle search */
     //printf("NOT IMPLEMENTED!\n"); /* TBD  */
     if (argc != 3) {
       print_usage("Improper arguments for search", argv[0]);
