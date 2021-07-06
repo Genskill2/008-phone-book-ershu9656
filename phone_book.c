@@ -94,7 +94,7 @@ int main(int argc, char *argv[]) {
     }
     fclose(fp);
     exit(0);
-   else {
+  } else {
     print_usage("Invalid command", argv[0]);
     exit(1);
   }
