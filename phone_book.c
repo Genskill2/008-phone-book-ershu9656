@@ -71,7 +71,7 @@ int main(int argc, char *argv[]) {
     FILE *fp = open_db_file();
     char *name = argv[2];
     if(!search(fp,name)){
-      printf("no match");
+      printf("no match\n");
       
     }
     fclose(fp);
@@ -208,7 +208,7 @@ void list(FILE *db_file) {
   free_entries(base);
   size=count;
   
-  printf("total entries : %d\n",count);
+  printf("total entries :  %d\n",count);
 }
 
 
@@ -261,7 +261,7 @@ int search(FILE *db_file, char *name){
   int found=0;
   while (p!=NULL) {
     if (strcmp(p->name, name) == 0) {
-      printf("%s",p->phone);
+      printf("%s\n",p->phone);
       found=1;
     }
     
