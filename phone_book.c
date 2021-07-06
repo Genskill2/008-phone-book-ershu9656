@@ -208,7 +208,7 @@ void list(FILE *db_file) {
   free_entries(base);
   size=count;
   
-  printf("total entries :  %d\n",count);
+  printf("Total entries :  %d\n",count);
 }
 
 
